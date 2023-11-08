@@ -1,13 +1,10 @@
 import React, { Fragment } from "react";
-import { RecoverPassword } from "@/components/RecoverPassword";
-import { StyledEngineProvider } from "@mui/material/styles";
+import { ResetPasswordForm } from "@/components/ResetPasswordForm";
 
 const RouteRecoverPassword = () => {
   return (
     <Fragment>
-      <StyledEngineProvider injectFirst>
-        <RecoverPassword />
-      </StyledEngineProvider>
+      <ResetPasswordForm />
     </Fragment>
   );
 };

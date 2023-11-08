@@ -186,7 +186,7 @@ export const LoginUser = () => {
                   direction={{ base: "column", sm: "row" }}
                   justify={"flex-end"}
                 >
-                  <Link href={"/auth/recover-password"}>
+                  <Link href={"/auth/confirm-identity"}>
                     <Text>¿Has olvidado tu contraseña?</Text>
                   </Link>
                 </Stack>
