@@ -1,0 +1,63 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    margin: .5rem 0;
+    padding: .75rem;
+    border-radius: 12px;
+    transition: background-color 0.3s; 
+  }
+
+  button:first-child{
+    &:hover {
+      background-color: #CFCFD0
+    }
+  }
+  button:nth-child(2){
+    &:hover {
+      background-color: rgba(0, 106, 255, 0.8)
+    }
+  }
+  button:last-child{
+    &:hover {
+      background-color: orange
+    }
+  }
+
+  .container_google{
+    background-color: #FFF;
+
+    p{
+      color: #000;
+    }
+  }
+  .container_facebook{
+    background-color: #006aff;
+
+    p{
+      color: #FFF;
+    }
+  }
+  .container_gues{
+    background-color: #FFD700;
+
+    p{
+      color: #000;
+    }
+  }
+}
+
+@media  (min-width: 320px) and (max-width: 480px) {
+  .container{
+    button{
+      width: 85%;
+    }
+  }
+}
