@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import styles from "@/components/AuthFirebase/authFirebase.module.scss";
+import styles from "@/components/Auth/AuthFirebase/authFirebase.module.scss";
 import { Icon } from "@iconify/react";
 export const AuthFirebase = () => {
   return (

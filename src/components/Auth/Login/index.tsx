@@ -24,7 +24,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
-import axios from "../../util/axios";
+import axios from "../../../util/axios";
 
 export const LoginUser = () => {
   const [showPassword, setShowPassword] = useState(false);

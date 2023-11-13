@@ -11,11 +11,15 @@ import {
   Center,
   Heading,
   FormErrorMessage,
+  Box,
+  Image,
+  Text,
 } from "@chakra-ui/react";
 import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
 import axios from "@/util/axios";
 import { useChakraToast } from "@/hooks/useToast";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 type NumberCode = {
   email: string;
@@ -92,8 +96,30 @@ export const ConfirmCode = () => {
   };
 
   return (
-    <Flex minH={"100vh"} align={"center"} justify={"center"} bg={"#000"}>
-      <form onSubmit={handleSubmit(confirmCode)}>
+    <Flex
+      minH={"100vh"}
+      align={"center"}
+      justify={"center"}
+      bg={"#000"}
+      flexDirection={"column"}
+    >
+      <Box>
+        <Image
+          width={200}
+          height={200}
+          src={
+            "https://res.cloudinary.com/dafsjo7al/image/upload/v1699408622/Screenshot_10_fpqnyo.png"
+          }
+          alt="Logo Quiero Pudrirme En Plata"
+        />
+      </Box>
+      <form
+        onSubmit={handleSubmit(confirmCode)}
+        style={{
+          paddingLeft: "1.5rem",
+          paddingRight: "1.5rem",
+        }}
+      >
         <Stack
           spacing={4}
           w={"full"}
@@ -109,6 +135,7 @@ export const ConfirmCode = () => {
               fontWeight={"bold"}
               lineHeight={1.1}
               fontSize={{ base: "2xl", md: "3xl" }}
+              textAlign={"center"}
             >
               Verifica tu correo electrónico
             </Heading>
@@ -158,6 +185,14 @@ export const ConfirmCode = () => {
             >
               Verificar
             </Button>
+          </Stack>
+          <Stack pt={6}>
+            <Text align={"center"}>
+              ¿No recibiste el codigo?{" "}
+              <Link href={"/auth/confirm-identity"} color={"blue.400"}>
+                <Text as="b"> Solicita Otro</Text>
+              </Link>
+            </Text>
           </Stack>
         </Stack>
       </form>

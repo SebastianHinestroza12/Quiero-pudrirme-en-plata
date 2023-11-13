@@ -9,12 +9,14 @@ import {
   Stack,
   Text,
   FormErrorMessage,
+  Box,
+  Image,
 } from "@chakra-ui/react";
 import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
-import { UserDataOptional } from "@/interfaces";
 import axios from "@/util/axios";
 import { useChakraToast } from "@/hooks/useToast";
 import { useRouter } from "next/navigation";
+import styles from "./sendEmail.module.scss";
 
 export const SendCodeToEmail = () => {
   const showToast = useChakraToast();
@@ -84,11 +86,27 @@ export const SendCodeToEmail = () => {
   };
 
   return (
-    <Flex minH={"100vh"} align={"center"} justify={"center"} bg={"#000"}>
-      <form onSubmit={handleSubmit(sendEmail)}>
+    <Flex
+      minH={"100vh"}
+      align={"center"}
+      justify={"center"}
+      bg={"#000"}
+      flexDirection={"column"}
+    >
+      <Box>
+        <Image
+          width={200}
+          height={200}
+          src={
+            "https://res.cloudinary.com/dafsjo7al/image/upload/v1699408622/Screenshot_10_fpqnyo.png"
+          }
+          alt="Logo Quiero Pudrirme En Plata"
+        />
+      </Box>
+      <form onSubmit={handleSubmit(sendEmail)} className={styles.form}>
         <Stack
           spacing={4}
-          w={"full"}
+          mx={"auto"}
           maxW={"md"}
           bg={"#0a0a0a"}
           rounded={"xl"}
