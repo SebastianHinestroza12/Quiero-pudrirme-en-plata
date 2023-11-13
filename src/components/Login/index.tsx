@@ -39,7 +39,7 @@ export const LoginUser = () => {
   const onSubmit: SubmitHandler<FieldValues> = async (values) => {
     const userData: UserData = values as UserData;
     try {
-      await new Promise((resolve) => setTimeout(resolve, 3000));
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       const login = await axios.post("/auth/login", userData);
       const { userName } = login.data;
 
@@ -56,8 +56,20 @@ export const LoginUser = () => {
         }, 4000);
       }
     } catch (error: any) {
-      //Contraseña o email incorrecto
-      if (error.response && error.response.status === 401) {
+      //Servidor Apagado
+
+      if (error.code === "ERR_NETWORK") {
+        return showToast({
+          title: "Error del Servidor",
+          description: "Por favor, inténtalo de nuevo más tarde.",
+          status: "error",
+          duration: 7000,
+        });
+      }
+
+      const { status } = error.response;
+
+      if (status === 401) {
         showToast({
           title: "Error de inicio de sesión",
           description:
@@ -65,7 +77,7 @@ export const LoginUser = () => {
           status: "error",
           duration: 7000,
         });
-      } else if (error.response && error.response.status === 404) {
+      } else if (status === 404) {
         showToast({
           title: "Usuario no registrado",
           description:
@@ -74,7 +86,7 @@ export const LoginUser = () => {
           duration: 7000,
           isClosable: true,
         });
-      } else if (error.response && error.response.status === 403) {
+      } else if (status === 403) {
         //Cuenta Bloqueada Por Intentos Fallidos
         showToast({
           title: "Cuenta Bloqueada",
@@ -90,7 +102,7 @@ export const LoginUser = () => {
           title: "Error del Servidor",
           description: "Por favor, inténtalo de nuevo más tarde.",
           status: "error",
-          duration: 15000,
+          duration: 7000,
         });
       }
     }

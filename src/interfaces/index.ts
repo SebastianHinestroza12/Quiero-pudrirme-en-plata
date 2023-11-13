@@ -1,7 +1,10 @@
-export type UserData = {
+export interface UserData {
   email: string;
   password: string;
-};
+  userName?: string;
+}
+
+export type UserDataOptional = Partial<UserData>;
 
 export type ToastOptions = {
   title: string;
