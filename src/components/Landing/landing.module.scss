@@ -1,0 +1,21 @@
+.container_play{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover{
+    background-color: #000048;
+  }
+
+  .icon_play{
+    margin-right: 7px;
+  }
+}
+
+
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

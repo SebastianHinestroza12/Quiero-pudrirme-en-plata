@@ -128,7 +128,9 @@ export const LoginUser = () => {
       </Box>
       <Stack spacing={6} mx={"auto"} maxW={"lg"} py={4} px={6}>
         <Stack align={"center"}>
-          <Heading fontSize={"4xl"}>Iniciar sesión en su cuenta</Heading>
+          <Heading textAlign={"center"} fontSize={"4xl"}>
+            Iniciar sesión en su cuenta
+          </Heading>
         </Stack>
         <Box rounded={"lg"} bg={"#0a0a0a"} boxShadow={"lg"} p={8}>
           <form onSubmit={handleSubmit(onSubmit)}>
