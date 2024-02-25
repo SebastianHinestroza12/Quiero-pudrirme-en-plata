@@ -1,0 +1,32 @@
+.option_response{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.container_options{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: .7rem;
+  border-radius: .75rem;
+  margin: 1rem;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .container_vstack{
+    max-width: 100%;
+    
+  }
+
+  .option_response{
+    grid-template-columns: 1fr
+  }
+
+  .container_options{
+    margin: 7px;
+  }
+}

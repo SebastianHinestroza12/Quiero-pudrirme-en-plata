@@ -52,7 +52,7 @@ export const LoginUser = () => {
           isClosable: false,
         });
         setTimeout(() => {
-          router.push("/inicio");
+          router.push("/play_game");
         }, 4000);
       }
     } catch (error: any) {

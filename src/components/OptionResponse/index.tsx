@@ -1,13 +1,15 @@
 import React from "react";
-import styles from "./option.module.scss";
+import { Box, Flex, Text } from "@chakra-ui/react";
 
 export const OptionResponse = (props: any) => {
   return (
-    <div className={styles.container_option}>
-      <p>
-        <span>{props.letter}:</span>
-        {props.option}
-      </p>
-    </div>
+    <Flex>
+      <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
+        <Text color={"orange"} fontWeight={"bold"} fontSize={20}>
+          {props.letter}:
+        </Text>
+        <Text marginLeft={3}>{props.option}</Text>
+      </Box>
+    </Flex>
   );
 };
