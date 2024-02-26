@@ -35,7 +35,7 @@ export const Question = () => {
       className={styles.container_vstack}
       align="start"
       spacing={4}
-      p={4}
+      p={2}
       borderRadius="lg"
       bg={'white'}
       maxWidth={'50%'}

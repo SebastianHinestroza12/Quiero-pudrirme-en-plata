@@ -14,3 +14,8 @@ export type ToastOptions = {
   isClosable?: boolean;
   position?: "top-right" | "top-left" | "bottom-right" | "bottom-left";
 };
+
+export interface WildcardUser {
+  name: string;
+  urlIcon: string;
+}

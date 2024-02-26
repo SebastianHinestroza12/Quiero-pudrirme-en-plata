@@ -3,3 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html, body{
+  background: linear-gradient(to bottom right, #000, #000048);
+  height: 100%;
+}
