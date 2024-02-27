@@ -14,7 +14,7 @@ export const WildCard = ({ name, urlIcon }: WildcardUser) => {
       <Box bg={"black"} borderRadius={90} p={3} cursor={"pointer"}>
         {urlIcon}
       </Box>
-      <Text>{name}</Text>
+      <Text mt={2}>{name}</Text>
     </Flex>
   );
 };

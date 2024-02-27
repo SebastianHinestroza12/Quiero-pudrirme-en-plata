@@ -15,11 +15,15 @@
   cursor: pointer;
 }
 
+.container_vstack{
+  margin-top: 4rem;
+}
+
 
 @media only screen and (max-width: 767px) {
   .container_vstack{
     max-width: 100%;
-    
+    margin-top: 1rem;
   }
 
   .option_response{

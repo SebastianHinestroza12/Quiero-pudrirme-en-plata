@@ -6,8 +6,8 @@ import { PepiconsPrintPeople } from '@/util/IconComponents/PepiconsPrintPeople'
 import { IcBaselineChangeCircle } from '@/util/IconComponents/IcBaselineChangeCircle'
 import { StreamlineEmojisTelephone } from '@/util/IconComponents/StreamlineEmojisTelephone'
 import { Box, Flex } from "@chakra-ui/react";
-import { Timer } from '@/components/Timer';
-// import styles from './inicio.module.scss';
+import { TimeQuestion } from '@/components/TimeQuestion'
+import styles from './inicio.module.scss';
 
 const PlayGame = () => {
 
@@ -20,16 +20,18 @@ const PlayGame = () => {
 
 
   return (
-    <Flex style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', margin: '1rem 3rem' }}>
+    <Flex style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
       <Box
         width={'100%'}
         display={'flex'}
         justifyContent={'space-between'}
         alignItems={'center'}
       >
-        <Timer />
+        <Box className={styles.time_container}>
+          <TimeQuestion />
+        </Box>
 
-        <Box display={'flex'}>
+        <Box display={'flex'} className={styles.container_wildcard}>
           {
             arrayWildcard.map((wildc) => (
               <WildCard key={wildc.id} name={wildc.name} urlIcon={wildc.component} />
