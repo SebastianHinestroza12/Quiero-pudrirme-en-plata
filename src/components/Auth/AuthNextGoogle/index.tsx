@@ -16,6 +16,7 @@ export const AuthNextGoogle = () => {
           </p>
         </button>
         <button className={styles.container_gues}>
+          <Icon icon="fluent:guest-add-24-filled" color="#000" width="30" />
           <p>
             <b>Ingresar como Invitado</b>
           </p>
