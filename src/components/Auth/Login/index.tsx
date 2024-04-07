@@ -6,7 +6,7 @@ import { UserData } from "@/interfaces";
 import Link from "next/link";
 import { useChakraToast } from "@/hooks/useToast";
 import { useRouter } from "next/navigation";
-import { AuthFirebase } from "../AuthFirebase";
+import { AuthNextGoogle } from "@/components/Auth/AuthNextGoogle";
 import {
   Flex,
   FormErrorMessage,
@@ -235,7 +235,7 @@ export const LoginUser = () => {
           <Divider flex="1" />
         </Box>
         <Box>
-          <AuthFirebase />
+          <AuthNextGoogle />
         </Box>
       </Stack>
     </Flex>

@@ -1,20 +1,18 @@
 import React, { Fragment } from "react";
-import styles from "@/components/Auth/AuthFirebase/authFirebase.module.scss";
+import styles from "@/components/Auth/AuthNextGoogle/authGoogle.module.scss";
 import { Icon } from "@iconify/react";
-export const AuthFirebase = () => {
+import { signIn, useSession } from "next-auth/react";
+
+export const AuthNextGoogle = () => {
+  const { data: session } = useSession();
+  console.log(session);
   return (
     <Fragment>
       <div className={styles.container}>
-        <button className={styles.container_google}>
+        <button onClick={() => signIn()} className={styles.container_google}>
           <Icon icon="devicon:google" width="30" />
           <p>
             <b>Inicia sesión con Google</b>
-          </p>
-        </button>
-        <button className={styles.container_facebook}>
-          <Icon icon="logos:facebook" width="30" />
-          <p>
-            <b>Inicia sesión con Facebook</b>
           </p>
         </button>
         <button className={styles.container_gues}>
