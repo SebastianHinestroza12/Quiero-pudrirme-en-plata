@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { Box } from "@chakra-ui/react";
-import ReactAudioPlayer from "react-audio-player";
 import "./time.scss";
 
 const RenderTime = ({ remainingTime }: any) => {
@@ -46,19 +45,8 @@ const RenderTime = ({ remainingTime }: any) => {
 };
 
 export function TimeQuestion() {
-  const [isPlaying, setIsPlaying] = useState(true);
-
-  const handleTogglePlay = () => {
-    setIsPlaying(!isPlaying);
-  };
-
   return (
     <Box margin={3} className="timer-wrapper">
-      <ReactAudioPlayer
-        src="https://res.cloudinary.com/dafsjo7al/video/upload/v1709004980/pregunta_myby7p.wav"
-        autoPlay={isPlaying}
-        controls
-      />
       <CountdownCircleTimer
         isPlaying
         size={120}

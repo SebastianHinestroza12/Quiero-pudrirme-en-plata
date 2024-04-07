@@ -20,7 +20,7 @@ const PlayGame = () => {
 
 
   return (
-    <Flex style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+    <Flex style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
       <Box
         width={'100%'}
         display={'flex'}

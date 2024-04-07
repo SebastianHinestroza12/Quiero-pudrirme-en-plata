@@ -1,0 +1,12 @@
+.timer_container {
+  animation: slideDown 30s linear infinite; /* Ajusta la duración según la duración del temporizador */
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%); /* Ajusta el porcentaje según tus necesidades */
+  }
+}
