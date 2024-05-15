@@ -10,14 +10,12 @@ import { TimeQuestion } from '@/components/TimeQuestion'
 import styles from './inicio.module.scss';
 
 const PlayGame = () => {
-
   const arrayWildcard = [
     { id: 1, name: "50:50", component: <Pepicons5050 /> },
     { id: 2, name: "Público", component: <PepiconsPrintPeople /> },
     { id: 3, name: "Cambiar Pregunta", component: <IcBaselineChangeCircle /> },
     { id: 4, name: "Llamada a un amigo", component: <StreamlineEmojisTelephone /> },
   ];
-
 
   return (
     <Flex style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>

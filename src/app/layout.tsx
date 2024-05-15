@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Roboto } from "next/font/google";
 import { Providers } from "@/app/providers";
 import { ProviderSession } from "@/app/ProviderSession";
+import { ProviderRedux } from "@/app/ProviderRedux";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -24,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <ProviderSession>
-          <Providers>{children}</Providers>
-        </ProviderSession>
+        <ProviderRedux>
+          <ProviderSession>
+            <Providers>{children}</Providers>
+          </ProviderSession>
+        </ProviderRedux>
       </body>
     </html>
   );
