@@ -1,9 +1,12 @@
 import {combineReducers} from 'redux';
-import counterSlice from './Reducers/Counter';
+import awardSlice from "./Reducers/Awards";
+import currentAwardSlice from "./Reducers/CurrentAward";
+// import soundSlice from "./Reducers/Sound";
 
 const rootReducer = combineReducers({
-  counterSlice,
-  // Agrega otros reducers aquí
+  awardSlice,
+  // soundSlice,
+  currentAwardSlice,
 });
 
 export default rootReducer;

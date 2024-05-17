@@ -1,0 +1,17 @@
+export const awards = [
+  { question: 15, money: "$1000000" },
+  { question: 14, money: "$500000" },
+  { question: 13, money: "$250000" },
+  { question: 12, money: "$125000" },
+  { question: 11, money: "$64000" },
+  { question: 10, money: "$32000" },
+  { question: 9, money: "$16000" },
+  { question: 8, money: "$8000" },
+  { question: 7, money: "$4000" },
+  { question: 6, money: "$2000" },
+  { question: 5, money: "$1000" },
+  { question: 4, money: "$500" },
+  { question: 3, money: "$300" },
+  { question: 2, money: "$200" },
+  { question: 1, money: "$100" },
+];

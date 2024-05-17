@@ -51,7 +51,7 @@ export const Question = () => {
           bg={'#000'}
           borderBottomColor="black.800"
           borderRadius="xl">
-          <Text textAlign={'center'}>
+          <Text textAlign={'center'} onClick={() => play()}>
             {questions.question}
           </Text>
         </Box>
