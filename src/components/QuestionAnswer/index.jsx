@@ -3,6 +3,8 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Flex, VStack, Text } from '@chakra-ui/react';
 import { OptionResponse } from '../OptionResponse';
+import { useAppDispatch, useAppSelector } from '@/Redux/Store/hook';
+import { playSound } from '@/Redux/ReducerConfig/Reducers/Sound';
 import styles from './question.module.scss';
 import axios from '../../util/axios';
 
@@ -11,13 +13,16 @@ export const Question = () => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [selectedAnswerText, setSelectedAnswerText] = useState('');
   const letter = ['A', 'B', 'C', 'D'];
-
   const handleOptionClick = (option, index) => {
     setSelectedAnswer(index);
     setSelectedAnswerText(option);
   };
+  // const dispatch = useAppDispatch();
+  // const sound = useAppSelector(state => state.soundSlice);
 
+  // dispatch(playSound('https://res.cloudinary.com/dafsjo7al/video/upload/v1709004980/pregunta_myby7p.wav'));
   useEffect(() => {
+
     const fetchQuestions = async () => {
       try {
         const response = await axios.get('/questions/Easy');
