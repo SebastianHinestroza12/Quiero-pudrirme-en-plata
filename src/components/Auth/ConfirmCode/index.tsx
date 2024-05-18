@@ -16,7 +16,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
-import axios from "@/util/axios";
+import axios from "@/config/axios";
 import { useChakraToast } from "@/hooks/useToast";
 import { useRouter } from "next/navigation";
 import Link from "next/link";

@@ -18,7 +18,7 @@ import {
 import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { UserDataOptional } from "@/interfaces";
-import axios from "@/util/axios";
+import axios from "@/config/axios";
 import { useChakraToast } from "@/hooks/useToast";
 import { useRouter } from "next/navigation";
 

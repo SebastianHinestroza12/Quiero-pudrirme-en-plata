@@ -22,7 +22,7 @@ import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { UserDataOptional } from "@/interfaces/index";
 import Link from "next/link";
-import axios from "@/util/axios";
+import axios from "@/config/axios";
 
 export const SignupCard = () => {
   const [showPassword, setShowPassword] = useState(false);
